@@ -1,4 +1,5 @@
 -- dependencies
+add_requires("glm")
 add_requires("glfw")
 add_requires("glad", { configs = { api = "gl=3.3", profile = "core", spec = "gl"} })
 add_requires("imgui", { configs = { opengl3 = true, glfw = true } })
@@ -14,4 +15,4 @@ target("project")
     add_files("src/*.cpp")
 
     -- linking
-    add_packages("glfw", "glad", "imgui")
+    add_packages("glfw", "glad", "imgui", "glm")
