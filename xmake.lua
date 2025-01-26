@@ -1,8 +1,18 @@
+-- package options
+local imgui_options =
+{
+    configs =
+    {
+        opengl3 = true,
+        glfw = true
+    }
+}
+
 -- dependencies
 add_requires("glm")
 add_requires("glfw")
-add_requires("glad", { configs = { api = "gl=3.3", profile = "core", spec = "gl"} })
-add_requires("imgui", { configs = { opengl3 = true, glfw = true } })
+add_requires("glad")
+add_requires("imgui", imgui_options)
 
 -- update vscode intellisense
 add_rules("plugin.compile_commands.autoupdate", { outputdir = ".vscode" })
